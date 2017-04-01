@@ -55,14 +55,14 @@ else:
      *
      * @since 2.6.0
      */
-    define('AUTH_KEY',         $_ENV['AUTH_KEY']);
-    define('SECURE_AUTH_KEY',  $_ENV['SECURE_AUTH_KEY']);
-    define('LOGGED_IN_KEY',    $_ENV['LOGGED_IN_KEY']);
-    define('NONCE_KEY',        $_ENV['NONCE_KEY']);
-    define('AUTH_SALT',        $_ENV['AUTH_SALT']);
-    define('SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT']);
-    define('LOGGED_IN_SALT',   $_ENV['LOGGED_IN_SALT']);
-    define('NONCE_SALT',       $_ENV['NONCE_SALT']);
+	  define('AUTH_KEY',         'F~@lH{%i!,v$fd|ahbrv{p}d+8t VZ1qtqG/eE]Ld4h|pK3-;-B/Ah>-.w@iO0:z');
+	  define('SECURE_AUTH_KEY',  'nfCU{dCuUKkG/4j421S&S&yr=Bx&ep||MD*)q m:2*>$.6E%ElN!qp8L+8,XGYu$');
+	  define('LOGGED_IN_KEY',    'jjt`#LhsE-.v59Z*DETXf|d<1!qh6FUuLkLU-}~Y[4Pp$SWJA+9.5d.KLqc3-*KC');
+	  define('NONCE_KEY',        'Hfcb1i*VI%XI<::y)=]9t!g`19Q|_J^c=a(9J%I}{haGO[Jpo:s^;n;DcAb]lNaz');
+	  define('AUTH_SALT',        'V6t?d,6o8(7D8R#}^b3b#O8% >Jv+HzT6VgDeV<dADw>n_oaZ$d]fqSnGV3}yvfc');
+	  define('SECURE_AUTH_SALT', '8HR}2@SV6y6|Iy%hk`0zN#-O`?4Uly_z-0WmRyWkWy ahJ)m[^9MEt?T&h4Z&>Sb');
+	  define('LOGGED_IN_SALT',   '[}z1Vpbm|%^^+?(7ka-GB9`eP-u*gu-#xSd.&M,}<e7ne%g)bG+)xV=K> vlH*oc');
+	  define('NONCE_SALT',       'a.2{1NAjTa3D$gM{+$-^8YOt+7knYDccNGIlW^+=JR:U1A~uQF-&X?w.Ci(4c[_2');
     /**#@-*/
 
     /** A couple extra tweaks to help things run well on Pantheon. **/

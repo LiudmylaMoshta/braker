@@ -1,0 +1,257 @@
+/*
+Theme Name: breaker
+Author: LiudmylaMoshta
+Author URI: http://mysite.com
+Version: 1.0
+*/
+ol, ul {
+    list-style: none;
+    -webkit-padding-start: 0;
+    padding-left: 0;
+}
+
+@font-face {
+    font-family: "Alternate Got No 1 D";
+    src: url('fonts/Alternate Gothic No1 D Regular.otf');
+    src: url('fonts/Alternate Gothic No1 D Regular.eot');
+    src: url('fonts/Alternate Gothic No1 D Regular.svg');
+    src: url('fonts/Alternate Gothic No1 D Regular.ttf');
+    src: url('fonts/Alternate Gothic No1 D Regular.woff');
+}
+@font-face {
+    font-family: "Alternate Got No 3 D";
+    src: url('fonts/Alternate Gothic No3 D Regular.otf');
+    src: url('fonts/Alternate Gothic No3 D Regular.eot');
+    src: url('fonts/Alternate Gothic No3 D Regular.svg');
+    src: url('fonts/Alternate Gothic No3 D Regular.ttf');
+    src: url('fonts/Alternate Gothic No3 D Regular.woff');
+}
+@font-face {
+    font-family: "Akzidenz Grotesk BE";
+    src: url('fonts/Akzidenz Grotesk BE.otf');
+    src: url('fonts/Akzidenz Grotesk BE.eot');
+    src: url('fonts/Akzidenz Grotesk BE.svg');
+    src: url('fonts/Akzidenz Grotesk BE.ttf');
+    src: url('fonts/Akzidenz Grotesk BE.woff');
+}
+//img{
+//    width: 100%;
+//    height: auto;
+//}
+html{
+    font-size: 12px;
+}
+body{
+    background-color: #0f1318;
+}
+#header{
+    overflow: hidden;
+    border-bottom: 21px solid #d81406;
+    .btn-collapsed-beaker {
+        color: #ffffff;
+        &:hover, &:focus {
+            color: #d81406;
+        }
+
+    }
+
+    .navbar-breaker{
+        .active{
+            background: #d81406;
+        }
+        li{
+            font:400 1.25rem/1.1875rem "Alternate Got No 3 D";
+            text-transform: uppercase;
+            a{
+                opacity: 0.64;
+                color: #ffffff;
+                img {
+                    width: auto;
+                    height: 31px;
+                    margin: -10px 0;
+                }
+            }
+            &:hover{
+                a{
+                    color: #ffffff;
+                    background: #d81406;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .image-welcome{
+        img {
+            margin: 9% auto;
+        }
+    }
+}
+
+.text-home{
+    //padding: 140px 10px 70px 10px;
+    padding: 15px 10px;
+    color: #b5cbd1;
+    font:300 2.625rem/3.125rem "Akzidenz Grotesk BE";
+}
+.title-home{
+    color: #b5cbd1;
+    font:800 4.6875rem/5.0625rem "Alternate Got No 1 D";
+    text-transform: uppercase;
+    //border-bottom: 2px solid #d81406;
+    //padding-left: 98px;
+}
+
+/*
+.list-contact{
+    text-transform: uppercase;
+    text-align: center;
+    list-style-type: none;
+    .title-contact{
+        font:400 2.375rem/2.375rem "Alternate Got No 3 D";
+        color: #d61919;
+    }
+    h3{
+        color: #ffffff;
+        font:400 2.375rem/2.375rem "Alternate Got No 1 D";
+    }
+    p{
+        color: #b5cbd1;
+        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
+    }
+    a{
+        color: #b5cbd1;
+        text-decoration: none;
+        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
+    }
+}
+*/
+
+
+.list-contact{
+    list-style-type: none;
+    border-bottom: 3px solid #d81406;
+    text-align: center;
+    .title-contact {
+        text-transform: uppercase;
+        color: #d81406;
+        font-family: "Alternate Got No 1 D",sans-serif;
+        font-size: 63px;
+        font-weight: 400;
+        line-height: 38px;
+        border-bottom:3px dotted #b5cbd1 ;
+    }
+    h3{
+        color: #ffffff;
+        font-family: "Alternate Got No 3 D",sans-serif;
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 50px;
+        text-transform: uppercase;
+    }
+    p{
+        color: #b5cbd1;
+        font-family: "Akzidenz Grotesk BE",sans-serif;
+        font-size: 31px;
+        font-weight: 300;
+        line-height: 63px;
+        text-transform: uppercase;
+    }
+    a{
+        color: #b5cbd1;
+        text-decoration: none;
+        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE",sans-serif;
+
+    }
+}
+/*-----------------------list-directors------------------------------------------*/
+.list-directors{
+    padding: 10px;
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 2px solid #d81406;
+        padding: 15px 0;
+
+        .title-name{
+            font:400 3.125rem/2.375rem "Alternate Got No 3 D";
+            color: #d61919;
+            border-bottom: 3px dotted #b5cbd1 ;
+            text-transform: uppercase;
+        }
+        .link-more {
+            text-decoration: none;
+        }
+
+        .link-bio{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 50px;
+            color: #b5cbd1;
+            font:300 2.375rem/3.125rem "Akzidenz Grotesk BE";
+            text-transform: uppercase;
+            &:after{
+                content: "\2192";
+                color: #d61919;
+                font-size: 63px;
+                font-weight: 400;
+            }
+
+        }
+    }
+}
+.bio-directors{
+    //padding: 53px 80px;
+    padding: 10px;
+    overflow: hidden;
+    .title-name{
+        font:400 3.125rem/2.375rem "Alternate Got No 3 D";
+        color: #d61919;
+        border-bottom: 3px dashed #b5cbd1 ;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    p{
+        img{
+            float: left;
+            //margin-right: 50px;
+        }
+    }
+    p{
+        color: #b5cbd1;
+        font:300 2.3rem/2.625rem "Akzidenz Grotesk BE";
+
+    }
+}
+
+
+@media (min-width: 768px){
+    html{
+        font-size: 14px;
+    }
+    .list-directors{
+        li{
+            padding: 20px 0;
+            flex-direction: row;
+            .title-name, .link-more{
+                width: 25%;
+                //margin: 15px;
+                display: inline-block;
+            }
+            .thumbnail-directors {
+                width: auto;
+                text-align: center;
+                //width: 50%;
+            }
+            .tittle-name {
+                text-align: right;
+            }
+            .link-more {
+                text-align: left;
+            }
+        }
+    }
+}
