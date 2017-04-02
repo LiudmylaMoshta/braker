@@ -10,11 +10,10 @@
 			<p class="text-bio">
 				<?php the_content(); ?>
 			</p>
-			<?php the_title('<h3 class="title-name">','</h3>'); ?>
-			<?php
+			<?php the_title('<h3 class="title-name">','</h3>');
 		endwhile;
-	else: ?>
-	<?php endif; ?>
+	else:
+	endif; ?>
 </article>
 
 
