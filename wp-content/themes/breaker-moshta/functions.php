@@ -3,6 +3,8 @@
 
 function breaker() {
     wp_enqueue_style('style', get_template_directory_uri().'/style.css');
+    wp_enqueue_script('script', get_template_directory_uri().'/fancybox/jquery.fancybox.js');
+
 }
 add_action('wp_enqueue_scripts', 'breaker');
 
@@ -157,6 +159,114 @@ function video_directors_init() {
     register_post_type( 'video_directors', $args );
 }
 add_action( 'init', 'video_directors_init' );
+
+
+// Creates video Custom Post Type
+//function works_directors_init() {
+//	$args = array(
+//		'label' => 'Video_Directors',
+//		'public' => true,
+//		'show_ui' => true,
+//		'capability_type' => 'post',
+//		'hierarchical' => false,
+//		'rewrite' => array('slug' => 'director'),
+//		'query_var' => true,
+//		'menu_icon' => 'dashicons-video-alt',
+//		'supports' => array(
+//			'title',
+//			'editor',
+//			'excerpt',
+//			'trackbacks',
+//			'custom-fields',
+//			'comments',
+//			'revisions',
+//			'thumbnail',
+//			'author',
+//			'page-attributes',)
+//	);
+//	register_post_type( 'works_directors', $args );
+//}
+//add_action( 'init', 'works_directors_init' );
+
+//---------------------------------------------------------------------------------
+//add_action( 'init', 'sheensay_post_type' );
+
+add_action( 'init', 'work_directors_type' );
+
+function work_directors_type() {
+
+	// Регистрируем таксономию
+	register_taxonomy(
+		'name_directors', 'works_directors', array(
+			'label' => 'name',
+			'hierarchical' => true, // Если TRUE, таксономия будет аналогом рубрик (категорий). Если FALSE (по умолчанию), то таксономия станет аналогом меток (тегов).
+			'rewrite' => array( 'slug' => 'name_directors' ),
+		)
+	);
+
+	// Регистрируем произвольный тип записи (Custom Post Type)
+	register_post_type( 'works_directors', array(
+			'labels' => array(
+				'name' => 'video_directors',
+				'singular_name' => 'works_directors',
+			),
+			'public' => true,
+			'rewrite' => array( 'slug' => 'works_directors' ), // Тут определяется ярлык CPT
+			'has_archive' => true,
+			'supports' => array( 'title', 'editor', 'thumbnail' ), // Включаем поддержку заголовка, редактора, миниатюры
+		)
+	);
+}
+//-----------------------------------Taxsonomy---------------------------------------------------------------
+//function add_new_taxonomies() {
+//	/* создаем функцию с произвольным именем и вставляем
+//	в неё register_taxonomy() */
+//	register_taxonomy('Name_director',
+//		array('post'),
+//		array(
+//			'hierarchical' => false,
+//			/* true - по типу рубрик, false - по типу меток,
+//			по умолчанию - false */
+//			'labels' => array(
+//				/* ярлыки, нужные при создании UI, можете
+//				не писать ничего, тогда будут использованы
+//				ярлыки по умолчанию */
+//				'name' => 'name_director',
+//				'singular_name' => 'name',
+//				'all_items' => 'all name director',
+//				'parent_item' => null,
+//				'parent_item_colon' => null,
+//				'edit_item' => 'Edit name director',
+//				'add_new_item' => 'New name director',
+//				'menu_name' => 'name_director'
+//			),
+//			'public' => true,
+//			/* каждый может использовать таксономию, либо
+//			только администраторы, по умолчанию - true */
+//			'show_in_nav_menus' => true,
+//			/* добавить на страницу создания меню */
+//			'show_ui' => true,
+//			/* добавить интерфейс создания и редактирования */
+//			'show_tagcloud' => true,
+//			/* нужно ли разрешить облако тегов для этой таксономии */
+//			'update_count_callback' => '_update_post_term_count',
+//			/* callback-функция для обновления счетчика $object_type */
+//			'query_var' => true,
+//			/* разрешено ли использование query_var, также можно
+//			указать строку, которая будет использоваться в качестве
+//			него, по умолчанию - имя таксономии */
+//			'rewrite' => array(
+//				/* настройки URL пермалинков */
+//				'slug' => 'name_director', // ярлык
+//				'hierarchical' => false // разрешить вложенность
+//
+//			),
+//		)
+//	);
+//}
+//add_action( 'init', 'add_new_taxonomies', 0 );
+
+
 
 //------------------------------------------META-BOX-----------------------------------------------------------------------
 add_action('add_meta_boxes', 'my_extra_fields', 1);

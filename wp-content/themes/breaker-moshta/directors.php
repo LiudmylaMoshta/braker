@@ -23,11 +23,11 @@
 		<li>
 			<?php the_title('<h3 class="title-name">','</h3>'); ?>
 
-	            <?php $meta_value = get_post_meta($post->ID, 'video', true);
-	            if(!empty($meta_value)) {
-		            echo '<div class="img-responsive thumbnail-directors">' . $meta_value . '</div>';
-	            }
-	            ?>
+<!--	            --><?php //$meta_value = get_post_meta($post->ID, 'video', true);
+//	            if(!empty($meta_value)) {
+//		            echo '<div class="img-responsive thumbnail-directors">' . $meta_value . '</div>';
+//	            }
+//	            ?>
             <?php the_post_thumbnail('post-thumbnail', ['class' => 'img-responsive thumbnail-directors']); ?>
 			<a href="<?php the_permalink(); ?>" title="link" class="link-more">
 					<?php $meta_value = get_post_meta($post->ID, 'link bio', true);

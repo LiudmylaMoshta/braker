@@ -4,6 +4,7 @@ Author: LiudmylaMoshta
 Author URI: http://mysite.com
 Version: 1.0
 */
+@import url(fancybox/jquery.fancybox.css);
 ol, ul {
   list-style: none;
   -webkit-padding-start: 0;
@@ -72,30 +73,6 @@ body {
   font: 800 4.6875rem/5.0625rem "Alternate Got No 1 D";
   text-transform: uppercase; }
 
-/*
-.list-contact{
-    text-transform: uppercase;
-    text-align: center;
-    list-style-type: none;
-    .title-contact{
-        font:400 2.375rem/2.375rem "Alternate Got No 3 D";
-        color: #d61919;
-    }
-    h3{
-        color: #ffffff;
-        font:400 2.375rem/2.375rem "Alternate Got No 1 D";
-    }
-    p{
-        color: #b5cbd1;
-        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
-    }
-    a{
-        color: #b5cbd1;
-        text-decoration: none;
-        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
-    }
-}
-*/
 .list-contact {
   list-style-type: none;
   border-bottom: 3px solid #d81406;
@@ -103,17 +80,11 @@ body {
   .list-contact .title-contact {
     text-transform: uppercase;
     color: #d81406;
-    font-family: "Alternate Got No 1 D",sans-serif;
-    font-size: 63px;
-    font-weight: 400;
-    line-height: 38px;
+    font: 400 2.375rem/2.375rem "Alternate Got No 3 D";
     border-bottom: 3px dotted #b5cbd1; }
   .list-contact h3 {
     color: #ffffff;
-    font-family: "Alternate Got No 3 D",sans-serif;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 50px;
+    font: 400 2.375rem/2.375rem "Alternate Got No 1 D";
     text-transform: uppercase; }
   .list-contact p {
     color: #b5cbd1;
@@ -174,6 +145,22 @@ body {
     color: #b5cbd1;
     font: 300 2.3rem/2.625rem "Akzidenz Grotesk BE"; }
 
+.row-gallery {
+  background-color: #010101; }
+
+.home_gallery {
+  margin-top: 15px; }
+  .home_gallery .video {
+    margin: 25px 0; }
+  .home_gallery a {
+    color: inherit;
+    text-decoration: none; }
+  .home_gallery .thumnbnail-caption {
+    margin: 5px 0 20px; }
+  .home_gallery .title-name {
+    font: 300 1.625rem/1.125rem "Akzidenz Grotesk BE";
+    color: #ffffff; }
+
 @media (min-width: 768px) {
   html {
     font-size: 14px; }
@@ -183,10 +170,12 @@ body {
     flex-direction: row; }
     .list-directors li .title-name, .list-directors li .link-more {
       width: 25%;
+      margin: 15px;
       display: inline-block; }
     .list-directors li .thumbnail-directors {
       width: auto;
-      text-align: center; }
+      text-align: center;
+      width: 50%; }
     .list-directors li .tittle-name {
       text-align: right; }
     .list-directors li .link-more {

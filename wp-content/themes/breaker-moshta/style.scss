@@ -4,6 +4,8 @@ Author: LiudmylaMoshta
 Author URI: http://mysite.com
 Version: 1.0
 */
+@import "fancybox/jquery.fancybox.css";
+
 ol, ul {
     list-style: none;
     -webkit-padding-start: 0;
@@ -97,35 +99,7 @@ body{
     color: #b5cbd1;
     font:800 4.6875rem/5.0625rem "Alternate Got No 1 D";
     text-transform: uppercase;
-    //border-bottom: 2px solid #d81406;
-    //padding-left: 98px;
 }
-
-/*
-.list-contact{
-    text-transform: uppercase;
-    text-align: center;
-    list-style-type: none;
-    .title-contact{
-        font:400 2.375rem/2.375rem "Alternate Got No 3 D";
-        color: #d61919;
-    }
-    h3{
-        color: #ffffff;
-        font:400 2.375rem/2.375rem "Alternate Got No 1 D";
-    }
-    p{
-        color: #b5cbd1;
-        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
-    }
-    a{
-        color: #b5cbd1;
-        text-decoration: none;
-        font:300 1.8125rem/2.357rem "Akzidenz Grotesk BE";
-    }
-}
-*/
-
 
 .list-contact{
     list-style-type: none;
@@ -134,18 +108,12 @@ body{
     .title-contact {
         text-transform: uppercase;
         color: #d81406;
-        font-family: "Alternate Got No 1 D",sans-serif;
-        font-size: 63px;
-        font-weight: 400;
-        line-height: 38px;
+        font:400 2.375rem/2.375rem "Alternate Got No 3 D";
         border-bottom:3px dotted #b5cbd1 ;
     }
     h3{
         color: #ffffff;
-        font-family: "Alternate Got No 3 D",sans-serif;
-        font-size: 38px;
-        font-weight: 400;
-        line-height: 50px;
+        font:400 2.375rem/2.375rem "Alternate Got No 1 D";
         text-transform: uppercase;
     }
     p{
@@ -204,7 +172,6 @@ body{
     }
 }
 .bio-directors{
-    //padding: 53px 80px;
     padding: 10px;
     overflow: hidden;
     .title-name{
@@ -217,13 +184,32 @@ body{
     p{
         img{
             float: left;
-            //margin-right: 50px;
         }
     }
     p{
         color: #b5cbd1;
         font:300 2.3rem/2.625rem "Akzidenz Grotesk BE";
 
+    }
+}
+.row-gallery{
+    background-color: #010101;
+}
+.home_gallery {
+    margin-top: 15px;
+    .video{
+        margin: 25px 0;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+    .thumnbnail-caption{
+        margin: 5px 0 20px;
+    }
+    .title-name{
+        font:300 1.625rem/1.125rem "Akzidenz Grotesk BE";
+        color: #ffffff;
     }
 }
 
@@ -238,13 +224,13 @@ body{
             flex-direction: row;
             .title-name, .link-more{
                 width: 25%;
-                //margin: 15px;
+                margin: 15px;
                 display: inline-block;
             }
             .thumbnail-directors {
                 width: auto;
                 text-align: center;
-                //width: 50%;
+                width: 50%;
             }
             .tittle-name {
                 text-align: right;
