@@ -37,8 +37,9 @@ wp-content/backups/
 ######################
 *.log
 *.sql
-
+!breaker-moshta.sql
 # OS generated files #
+
 ######################
 .DS_Store*
 ehthumbs.db
